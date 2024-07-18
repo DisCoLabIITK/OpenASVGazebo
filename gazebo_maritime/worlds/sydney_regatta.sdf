@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-
+<!--Modified version of the OSRF Tutorial world file-->
 <sdf version="1.9">
   <world name="sydney_regatta">
 
@@ -348,7 +348,7 @@
       <uri>coast_waves</uri>
     </include>
 
-    <!-- The posts for securing the WAM-V -->
+    <!-- The posts for securing the ASV -->
     <include>
       <name>post_0</name>
       <pose>-535.916809 154.362869 0.675884 -0.17182 0.030464 -0.005286</pose>
@@ -365,7 +365,7 @@
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/post</uri>
     </include>
 
-    <!-- Antenna for communication with the WAM-V -->
+    <!-- Antenna for communication with the ASV -->
     <include>
       <pose>-531.063721 147.668579 1.59471 -0.068142 0 -0.1</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/antenna</uri>
@@ -423,7 +423,7 @@
       </message>
     </plugin>
 
-    <!-- Uncomment this block to load the WAM-V model-->
+    <!-- Uncomment this block to load the OpenASV model-->
     <!---->
     <include>
       <name>OpenASV</name>

@@ -1,0 +1,12 @@
+echo $GZ_SIM_RESOURCE_PATH
+echo $GZ_SIM_SYSTEM_PLUGIN_PATH 
+colcon build --merge-install
+source /opt/ros/humble/setup.bash
+source ./install/setup.bash 
+source ./path.bash
+gz sim -r src/gazebo_maritime/worlds/sydney_regatta.sdf
+gz topic -t /model/OpenASV/joint/left_engine_propeller_joint/cmd_thrust -m gz.msgs.Double -p 'data: 0.00'
+gz topic -t /model/OpenASV/joint/right_engine_propeller_joint/cmd_thrust -m gz.msgs.Double -p 'data: 0.00'
+
+gz topic -t "topic" -e/l/i
+
