@@ -10,3 +10,7 @@ gz topic -t /model/OpenASV/joint/right_engine_propeller_joint/cmd_thrust -m gz.m
 
 gz topic -t "topic" -e/l/i
 
+ros2 run ros_gz_bridge parameter_bridge /model/roboboat01/joint/left_engine_propeller_joint/cmd_thrust@std_msgs/msg/Float64]gz.msgs.Double
+ros2 run ros_gz_bridge parameter_bridge /model/roboboat01/joint/right_engine_propeller_joint/cmd_thrust@std_msgs/msg/Float64]gz.msgs.Double
+
+ros2 topic pub /model/roboboat01/joint/left_engine_propeller_joint/cmd_thrust std_msgs/msg/Float64 "data: 150"
